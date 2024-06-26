@@ -1,0 +1,27 @@
+{
+    // 想要下载的书籍 id
+    "book_id": [
+        3199625
+    ],
+    // 日志输出层级，有 "INFO"、"DEBUG" 两种
+    "logger_level": "INFO",
+    // 是否日志输出到文件。为空则输出到控制台，否则仅输出到文件。
+    // 日志文件保存在项目目录下的 log/ 目录中
+    "log_file": false,
+    // 保存时图片的格式，根据网站实际情况调整，现在从网站下载的图片默认是 .webp 格式
+    "picture_format": "webp",
+    // 设置保存图片时的质量，0 最差，100 最好
+    // 其实就是在设置 Image.save 的 quality 参数
+    "picture_quality": 50,
+    // 指定网站的 api，不稳定，将来可能变动
+    "api": {
+        // 小图片之前的请求链接，通过它可以确定分割图片的顺序
+        "req_before_split_page": "/deep/page/once/get",
+        // 一页的内容被分割成了 6 张图片，这些图片的链接都包含该字符串，以此筛选它们
+        "split_page": "/deep/page/lmg",
+        // 书签对应的链接
+        "bookmark": "/deep/book/v1/catatree",
+        // 书籍的名称、作者、总页数等等信息
+        "book_info": "/api/v7/read/initread"
+    }
+}

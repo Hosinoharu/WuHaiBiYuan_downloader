@@ -1,0 +1,7 @@
+.venv/
+artical/
+__pycache__/
+local_test/
+book_images/
+download_book/
+log/
